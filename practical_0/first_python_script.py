@@ -1,2 +1,1 @@
-#Prints good morning Gothenburg...in Swedisn
-print("god morgon Göteborg")
+print("Hello, I like you.. Do you like me? I like shoot dog.")
