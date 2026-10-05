@@ -11,3 +11,5 @@ print("Bonjour Göteborg")
 
 print("Hello, I like you.. Do you like me? I like shoot dog.")
 >>>>>>> refs/remotes/origin/main
+
+print("I need to install Baldur's Gate 3"")
