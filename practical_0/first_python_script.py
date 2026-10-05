@@ -2,3 +2,4 @@
 print("god morgon Göteborg")
 
 x = "x2000"
+print("Bonjour Göteborg")
