@@ -16,10 +16,3 @@ big_list = [a, b, c, d, e, f, g, h, i, j]
 #print the data type of each value
 for el in big_list:
     print(type(el))
-
-#Task 2
-#create an if/else-statement to determine if the string is empty or not
-if len(c) != 0:
-    print("non-empty")
-else:
-    print("empty")
