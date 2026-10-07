@@ -1,5 +1,5 @@
 sequence = 'GATTACAGAACTGATAC'
-"""
+
 a_count = 0
 i=0
 while a_count < 3:
@@ -7,13 +7,4 @@ while a_count < 3:
         a_count += 1
     i = i+1
 print("a_count:",a_count)
-print("the index in sequence of the third A", i-1)
-"""
-a_count = 0
-i=0
-while a_count <= 3:
-    if sequence[i] == 'A':
-        a_count += 1
-    i = i+1
-print("a_count:",a_count)
-print("the index in sequence of the third A:", i-1)
+git reset --hard HEAD~1
