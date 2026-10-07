@@ -49,7 +49,7 @@ if sample in mydict:
     else :
         print("Not enough reads")
 else:
-    print("Sample not found in dictionary")
+    print("Sample not found in dictionary. Type sample_ and a capital letter")
 
 
 
