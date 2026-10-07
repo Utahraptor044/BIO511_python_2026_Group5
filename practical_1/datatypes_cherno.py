@@ -69,15 +69,14 @@ if tupp is list or tuple or range:
 read_counts = {"sample_A": 1520000, "sample_B": 830000, "sample_C": None}
 print("sample_A" in read_counts)
 
-sample = "sample_K"
+sample = "sample_A"
+passed_qc = False
 
-if "sample_A" not in read_counts:
+if sample not in read_counts:
     print("unknown sample")
-if sample == None:
+elif read_counts[sample] is None:
     print("sequencing failed")
-elif read_counts[1] >= 1000000:
-    print("enough reads")
+elif read_counts[sample] > 1000000 and passed_qc:
+    print("ready for analysis")
 else:
     print("too few reads")
-
-passed_qc = True
