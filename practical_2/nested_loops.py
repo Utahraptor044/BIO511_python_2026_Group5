@@ -48,7 +48,7 @@ for sequence in sequences:
                 #print(f"stop codon {start_codon} found in sequence {sequence} starting at {i} ending at {i+3}")
                 #print(f"in sequence {sequence} the stop codon has position {i}")
                 sequence_stop_codon_pos[sequence] = i
-                
+
 print("start", sequence_start_codon_pos)
 print("stop", sequence_stop_codon_pos)
 
@@ -58,5 +58,6 @@ for i,j in sequence_start_codon_pos.items():
             list_of_sequences_with_start_codons_before_stop_codons.append(i)
         if i == k and j > l:
             list_of_sequences_with_stop_codons_before_start_codons.append(i)
+            
 print(f"{len(list_of_sequences_with_start_codons_before_stop_codons)} sequences with start codons before stop codons: {list_of_sequences_with_start_codons_before_stop_codons}")
 print(f"{len(list_of_sequences_with_stop_codons_before_start_codons)} sequences with stop codons before start codons: {list_of_sequences_with_stop_codons_before_start_codons}")
