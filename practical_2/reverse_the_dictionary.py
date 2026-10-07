@@ -26,5 +26,3 @@ for pat, bact_list in data.items(): #Loops through each item in the dictionary, 
         if strain in bacteria_to_patients.keys():
             bacteria_to_patients[strain].append(pat) #appends the patient (pat) to the value of each bacteria-key
 print(bacteria_to_patients)
-
-#this code didn't work for some reason.
