@@ -116,7 +116,4 @@ for sequence in sequences:
 
 
 
-#for sequence in sequences: 
-#    if start_codon in sequence:
-#        for codon in stop_codons:
-#            if codon in sequence:
+
