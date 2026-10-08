@@ -56,4 +56,7 @@ print("global result:", result)
 # Q: What does aggregate(nums, "max", 100) return, and why?
 # A: TypeError, like the one for aggregate(nums, "max", limit) that is due to line 35:  int > None
 
+print("Q:", aggregate(nums, "max", 100))
 
+# After addition of Error handling
+# 
