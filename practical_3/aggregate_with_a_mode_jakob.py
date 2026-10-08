@@ -48,15 +48,13 @@ print("global result:", result)
 """
         Print the global result. # global result:unset
         Call the function three times and print each returned value:
-            aggregate(nums, "sum", limit) # 20
-            aggregate(nums, "count", limit) # 3
-            aggregate(nums, "max", limit) # Type Error on line 35: TypeError: '>' not supported between instances of int and NonType
-        Print the global result again. # It won't print because of the Error that was triggered when command on line 42 tried to execute
+            aggregate(nums, "sum", limit) # 20 ## After addition of Error handling: 20
+            aggregate(nums, "count", limit) # 3 ## After addition of Error handling: 3
+            aggregate(nums, "max", limit) # Type Error on line 35: TypeError: '>' not supported between instances of int and NonType ## After addition of Error handling: 9
+        Print the global result again. # It won't print because of the Error that was triggered when command on line 42 tried to execute. ## After addition of Error handling: unset
 """
 # Q: What does aggregate(nums, "max", 100) return, and why?
 # A: TypeError, like the one for aggregate(nums, "max", limit) that is due to line 35:  int > None
 
-print("Q:", aggregate(nums, "max", 100))
-
-# After addition of Error handling
-# 
+# After addition of Error handling:
+# aggregate(nums, "max", 100) returns 9
