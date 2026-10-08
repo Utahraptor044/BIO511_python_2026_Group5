@@ -1,6 +1,4 @@
 
-
-
 def summarize_text(s):
     summary = {'digits': 0, 'letters': 0, 'other': 0 }
 
@@ -21,3 +19,6 @@ print(text_summarized)
 diff = len(text) - text_summarized['digits'] - text_summarized['letters']
 print(f'Length of text minus (the digits and letters) {diff}')
 """
+
+# What counts as "other" in text? Check that the numbers add up to the length of the string using len(text).
+# 'other' is spaces, commas, exclamation marks etc..
