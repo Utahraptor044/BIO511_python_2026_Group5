@@ -105,5 +105,4 @@ for sequence in sequences:
     for i in range(len(sequence)):
         print(i)
 
-
 #Dictionary
