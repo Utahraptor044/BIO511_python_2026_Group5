@@ -1,11 +1,11 @@
-def aggregate(seq, mode, threshold):
+#def aggregate(seq, mode, threshold):
 
 #########################################################################################"
 # require data #
 
 nums = [3, -1, 7, 2, 9, 0, 4]
 
-
+########################################################################################
 # Louis' version    
 def agregate(seq, mode, threshold):
 
@@ -50,5 +50,5 @@ def agregate(seq, mode, threshold):
 
     return result
 
-print(agregate(nums, "max", 3))
+print("Louis' output: ", agregate(nums, "max", 3))
 
