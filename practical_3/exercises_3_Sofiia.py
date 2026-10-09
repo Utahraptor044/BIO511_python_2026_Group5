@@ -81,8 +81,9 @@ def aggregate(seq, mode, threshold):
             elif mode=="count":
                 result+=1
             else:
-                result=n
-                #print(n)
+                if result is None or n>result:
+                    result=n
+                    #print(n)
     return result
 
 print("Global result is:", result)
@@ -105,6 +106,7 @@ print("Function aggregate(nums, 'max', 100) returns:", hund_result)
 #hence the function returns result = None, which was set earlier for all "max" mode operations.
 
 #Task4. Errors and try/except
+print("Task4")
 values = ['10', '5', ';', 'hello', '8', 'three', '2', '$#&^']
 
 for el in values:
