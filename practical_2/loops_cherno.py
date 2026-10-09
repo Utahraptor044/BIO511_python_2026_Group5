@@ -105,10 +105,10 @@ print("sequences " + str(both) + " have start and stop codons") #Prints a list o
 
 for sequence in sequences:
     for sta in start:
-        if sta in sequence and sequence.find(sta)%3 == 0:
-            print(f"the start codon {sta} is in sequence {sequence} at position {sequence.find(sta)}")
+        if sta in sequence and sequence.index(sta)%3 == 0:
+            print(f"the start codon {sta} is in sequence {sequence} at position {sequence.index(sta)}")
             for sto in stop:
-                if sto in sequence and (sequence.find(sto))%3 == 0:
-                    print(f"the stop codon {sto} is in sequence {sequence} at position {sequence.find(sto)}")
-                    if sequence.find(sto) > sequence.find(sta):
-                        print(f"sequence {sequence} is a legit sequence with start codon at position {sequence.find(sta)} and stop codon at position {sequence.find(sto)}")
+                if sto in sequence and (sequence.index(sto))%3 == 0:
+                    print(f"the stop codon {sto} is in sequence {sequence} at position {sequence.index(sto)}")
+                    if sequence.index(sto) > sequence.index(sta):
+                        print(f"sequence {sequence} is a legit sequence with start codon at position {sequence.index(sta)} and stop codon at position {sequence.index(sto)}")
