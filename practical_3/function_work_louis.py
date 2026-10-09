@@ -96,3 +96,23 @@ def agregate(seq, mode, threshold):
 
 print(agregate(nums, "max", 3))
 
+###################################################################################
+### Try loop ###
+
+
+values = ['10', '5', 'hello', '8', 'three', '2', 'I like chocolate']
+int_values = []
+
+for elem in values :
+    try:
+        curr_use = int(elem)
+        print(curr_use)
+        int_values.append(curr_use)
+    except ValueError:
+        print("Skipping invalid element:", elem)
+
+print(int_values)
+
+
+
+
