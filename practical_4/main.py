@@ -1,8 +1,7 @@
 #!/usr/bin/env python3
-from premade_script import codons
+from premade_script import codons, exercise_function
 import argparse
 import os
-
 
 def existing_file(file_path):
     """This function checks if the provided file path exists and is a file."""
@@ -21,9 +20,14 @@ def main():
     sequence_codons = codons(args.sequence)
     
     # Here you need to check the output of the function
-    
+    print(sequence_codons)
+
     # Here you need to call the exercise_function from premade_script.py
-    
+
     # And check the output of that function
+    for header, codon_list in sequence_codons.items():
+        exercise_out = exercise_function(codon_list)
+        print(header, exercise_out)
+
 if __name__ == "__main__":
     main()
