@@ -115,5 +115,54 @@ for sequence in sequences:
 #print("There is a start codon before a stop codon in the sequence:", sequence)
 
 
+###########################################################################################
+### Reverse the dictionnary ###
 
+# Data
+
+data = {
+    'pat_001': ['bacZZt98', 'bac889Ytd'], 
+    'pat_002': ['bac0GFrr'], 
+    'pat_003': ['bac889Ytd', 'bacFq55Hj', 'bacZZt98']
+}
+
+# Create a list to register all of the known strands
+unique_bacteria = []
+
+###
+# First, will register all of the identified strands
+
+for ID, bact_strain in data.items():
+    for strain in bact_strain:
+        if not strain in unique_bacteria:
+            unique_bacteria.append(strain)
+
+print("list of the refereced bacterial strands :", unique_bacteria)
+
+###
+# Link each bacterial stand to the patients
+
+# Create the dictionary
+
+bacteria_to_patient = {}
+
+for strand in unique_bacteria:
+    #print(strand)
+    bacteria_to_patient[strand]="[]"
+
+print("New dictionary created:", bacteria_to_patient)
+
+# Check for every patient if they have the strand. If yes, append their ID to the right bacterial strand
+
+for strand, patient in bacteria_to_patient.items():
+    result_ID = []
+    for ID, bact_str in data.items():
+        if strand in bact_str:
+            #print(strand)
+            result_ID.append(ID)
+    bacteria_to_patient[strand] = result_ID
+            
+            
+print(bacteria_to_patient)
+    
 
