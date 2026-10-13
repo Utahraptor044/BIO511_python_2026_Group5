@@ -14,7 +14,7 @@ with open(f'{args.input}','r') as file:     #Opens and reads the file from --inp
         print(row)                          #Prints row
 
 dframe = pd.read_csv(args.input)
-info = pd.DataFrame.info(dframe)
+info = pd.DataFrame.describe(dframe)
 print(info)
 
 """ :::::::::::::::Output:::::::::::::::
@@ -25,17 +25,13 @@ print(info)
 ['1', '2', '3', '4', '5']
 ['1', '2', '3', '4', '5']
 ['11', '12', '13', '14', '15']
-<class 'pandas.DataFrame'>
-RangeIndex: 5 entries, 0 to 4
-Data columns (total 5 columns):
- #   Column  Non-Null Count  Dtype
----  ------  --------------  -----
- 0   1       5 non-null      int64
- 1   2       5 non-null      int64
- 2   3       5 non-null      int64
- 3   4       5 non-null      int64
- 4   5       5 non-null      int64
-dtypes: int64(5)
-memory usage: 332.0 bytes
-None
+               1          2          3          4          5
+count   5.000000   5.000000   5.000000   5.000000   5.000000
+mean    3.000000   4.000000   5.000000   6.000000   7.000000
+std     4.472136   4.472136   4.472136   4.472136   4.472136
+min     1.000000   2.000000   3.000000   4.000000   5.000000
+25%     1.000000   2.000000   3.000000   4.000000   5.000000
+50%     1.000000   2.000000   3.000000   4.000000   5.000000
+75%     1.000000   2.000000   3.000000   4.000000   5.000000
+max    11.000000  12.000000  13.000000  14.000000  15.000000
 :::::::::::::::Output::::::::::::::: """
