@@ -32,6 +32,8 @@ for u_bact in unique_bacteria:
     if u_bact not in bacteria_to_patients.keys():
         bacteria_to_patients[u_bact] = []
 
+print(bacteria_to_patients)
+
 for patients in data.keys():
     for bacteria in data[patients]:
         bacteria_to_patients[bacteria].append(patients)
