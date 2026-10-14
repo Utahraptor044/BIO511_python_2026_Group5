@@ -73,7 +73,10 @@ plt.close()
 plot1 = (
     ggplot(clean_df, aes(x = "flipper_length_mm", y = "body_mass_g", color = "species"))
     + geom_point()
-    + ggtitle("Body mass in function of the flipper length (plotnine)")
+    + ggtitle("Body mass in function of the flipper length (plotnine)"),
+    +labs(x = "Flipper length (mm)",
+          y = "Body mass (g)",
+          color = "Species")
 )
 
 plot1.save('plot_louis/plotnine_figure_louis.png', width = 8, height = 6, dpi = 300)
