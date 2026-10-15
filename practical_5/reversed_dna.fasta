@@ -1,0 +1,16 @@
+>seq1_reverse_complement Reverse complement of seq1
+GCATGCATGCATGCATGCATGCATGCAT
+>seq2_reverse_complement Reverse complement of seq2
+TGTAATCTGTAATCTGTAATC
+>seq3_reverse_complement Reverse complement of seq3
+GATATCGCGATATCGCGATATCGCGATATCGCGATATCGCG
+>seq4_reverse_complement Reverse complement of seq4
+TTTAAACCCGGGTTTAAA
+>seq5_reverse_complement Reverse complement of seq5
+GCGCCGCGGCGCGCCGCGGCGCGCCGCGGC
+>seq6_reverse_complement Reverse complement of seq6
+ATATATATATATATATATATAT
+>seq7_reverse_complement Reverse complement of seq7
+TGCAACGTTGCAACGTTGCAACGTTGCAACGT
+>seq8_reverse_complement Reverse complement of seq8
+GATCGTACGATCAGCTAGCTAGCATCAGTCAGTCATG
