@@ -27,7 +27,7 @@ print(dict)
 print(dict.values())
 print(type(dict))
 
-tupp = ("julafton","juldagen","")
+tupp = ("derp",)
 print(tupp)
 print(type(tupp))
 
@@ -58,13 +58,15 @@ elif my_int == 0:
 elif my_int <= 0:
     print("negative integer")  
 
-if tupp is list or tuple or range:
+if type(tupp) == list or type(tupp) == tuple or type(tupp) == range:
     if len(tupp) == 0:
         print("empty")
     elif len(tupp) == 1:
-        print("tuple is not empty")
+        print(f"{type(tupp)} is not empty")
     elif len(tupp) >= 1:
         print("multiple items")
+else:     
+    print("wrong type for this task")
 
 read_counts = {"sample_A": 1520000, "sample_B": 830000, "sample_C": None}
 print("sample_A" in read_counts)
