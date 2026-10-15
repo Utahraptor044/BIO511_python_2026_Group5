@@ -4,7 +4,7 @@ from plotnine import ggplot, aes, geom_point, ggtitle,labs, geom_histogram, geom
 
 #Load the ‘penguins’ dataset using seaborn. Remove any rows with missing values. Hint: Check out how to use the dropna() function.
 
-penguins = sns.load_dataset("penguins")
+""" penguins = sns.load_dataset("penguins")
 
 penguins_clean = pandas.DataFrame.dropna(penguins)
 
@@ -12,7 +12,7 @@ penguins_clean = pandas.DataFrame.dropna(penguins)
 #Plot a scatterplot using matplotlib. 
 #The plot should show flipper length on the x-axis and body mass on the y-axis. Add an informative title, xlabel and ylabel. Save the plot.
 
-"""
+
 plt.scatter(data=penguins_clean,x="flipper_length_mm",y="body_mass_g")
 plt.title("Flipper length vs Body Mass")
 plt.xlabel("Flipper length (mm)")
@@ -60,11 +60,10 @@ plotnyne.save("plotnyne.png")
 
 #Create a histogram to show the distribution of the bill lengths in the data. Use the function you like best.
 
-
 plotnyne_histo = (
     ggplot(penguins_clean, aes(x="bill_length_mm"))
     +labs(x="Bill length (mm)")
-    +geom_histogram())
+    +geom_histogram(binwidth=2))
 
 plotnyne_histo.show()
 
@@ -118,7 +117,7 @@ sns.histplot(
 
 plt.tight_layout()
 plt.show()
-"""
+
 # Additional plotting assignment (optional)
 
 # Plot a distribution plot of the penguin flipper length using a histogram.
@@ -142,7 +141,7 @@ plt.show()
 # Save the plot.
 
 plt.savefig("flipperlngth_histplot.png")
-
+ """
 
 # Read the data CNV_log2_skin_melanoma.csv from the practice dugga (available on Canvas) using pandas.
 
@@ -160,7 +159,6 @@ plt.xlabel("Chromosome")
 plt.ylabel("CNV log2")
 plt.title("Chrosome vs Copy Number Variation")
 plt.show()
-
 
 # What do you see? Which chromosome(s) has the largest CNV interval? Which chromosome(s) has the smallest interval? Do the intervals add up with the numbers in the dataframe you used for the plot?
 # ANS: 
