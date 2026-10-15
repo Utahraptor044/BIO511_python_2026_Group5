@@ -97,18 +97,19 @@ for sequence in sequences:
 print(sta_seq) #Prints list of sequences that have start codons
 print(sto_seq) #Prints list of sequences that have stop codons
 
-both = set(sta_seq) & set(sto_seq)  #Creates a list of shared values between the lists sta_seq and sto_seq. I.e. sequences that have both start and stop codons
-                                    
-print("sequences " + str(both) + " have start and stop codons") #Prints a list of sequences having start and stop codons
+both = set(sta_seq) & set(sto_seq)  #Creates a set of shared values (intersection) between the lists sta_seq and sto_seq, first by converting the lists into sets. 
+                                    #Sets can only have unique values. I.e. sequences that have both start and stop codons will be in both sets.
+                     
+print("sequences " + str(both) + " have start and stop codons") #Prints the sequences, from the set both, having both start and stop codons
 
 #3
 
-for sequence in sequences:
-    for sta in start:
-        if sta in sequence and sequence.index(sta)%3 == 0:
-            print(f"the start codon {sta} is in sequence {sequence} at position {sequence.index(sta)}")
-            for sto in stop:
-                if sto in sequence and (sequence.index(sto))%3 == 0:
-                    print(f"the stop codon {sto} is in sequence {sequence} at position {sequence.index(sto)}")
-                    if sequence.index(sto) > sequence.index(sta):
+for sequence in sequences:                                      #Loops through sequences
+    for sta in start:                                           #Loops through start codons    
+        if sta in sequence and sequence.index(sta)%3 == 0:      #If the start codon is in the sequence and its index position is divisible by 3...it is a start codon
+            print(f"the start codon {sta} is in sequence {sequence} at position {sequence.index(sta)}") #Prints start codon, sequence and position of start codon within the sequence
+            for sto in stop:                                    #Loops through stop codons 
+                if sto in sequence and (sequence.index(sto))%3 == 0:    #If the stop codon is in the sequence and its index position is divisible by 3...it is a stop codon
+                    print(f"the stop codon {sto} is in sequence {sequence} at position {sequence.index(sto)}") #Prints stop codon, sequence and position of stop codon within the sequence
+                    if sequence.index(sto) > sequence.index(sta):                       #Filters that the stop codon is further downstream (higher position) than the start codon - Proper sequence.
                         print(f"sequence {sequence} is a legit sequence with start codon at position {sequence.index(sta)} and stop codon at position {sequence.index(sto)}")
